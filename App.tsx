@@ -188,6 +188,7 @@ const App: React.FC = () => {
   const renderView = () => {
     switch (activeView) {
       case 'home':
+        if (!prayerTimes) return null;
         return (
           <div className="space-y-6">
             <header className="px-2">
@@ -233,7 +234,7 @@ const App: React.FC = () => {
       case 'privacy':
         return <PrivacyPolicy language={language} onBack={() => setActiveView('settings')} />;
       default:
-        return <Dashboard prayerTimes={prayerTimes!} onViewCalendar={() => setActiveView('calendar')} language={language} prayerMethodId={prayerMethod} />;
+        return prayerTimes ? <Dashboard prayerTimes={prayerTimes!} onViewCalendar={() => setActiveView('calendar')} language={language} prayerMethodId={prayerMethod} /> : null;
     }
   };
 
@@ -276,7 +277,12 @@ const App: React.FC = () => {
 
       <main className="flex-1 overflow-y-auto pt-24 pb-32 lg:pt-8 lg:pb-8 px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          {loading ? (
+          {/* Always show Privacy view, bypass spinner */}
+          {activeView === 'privacy' ? (
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              {renderView()}
+            </div>
+          ) : loading ? (
             <div className="h-[60vh] flex flex-col items-center justify-center space-y-4">
               <div className="w-12 h-12 border-2 border-[#708238] border-t-transparent rounded-full animate-spin"></div>
               <p className="text-[#a4b465] text-sm font-medium animate-pulse">Bismillah...</p>
