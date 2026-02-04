@@ -48,6 +48,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({ language, setLanguage, pray
       updateKey: 'Update Store Credentials',
       install: 'Install to Home Screen',
       package: 'Package ID',
+      engine: 'App Engine',
       version: 'App Version',
       privacy: 'Privacy Policy & Terms'
     },
@@ -69,6 +70,7 @@ const SettingsView: React.FC<SettingsViewProps> = ({ language, setLanguage, pray
       updateKey: 'স্টোর ক্রেডেনশিয়াল আপডেট করুন',
       install: 'হোম স্ক্রিনে ইনস্টল করুন',
       package: 'প্যাকেজ আইডি',
+      engine: 'অ্যাপ ইঞ্জিন',
       version: 'অ্যাপ ভার্সন',
       privacy: 'গোপনীয়তা নীতি ও শর্তাবলী'
     }
@@ -244,6 +246,10 @@ const SettingsView: React.FC<SettingsViewProps> = ({ language, setLanguage, pray
           <div className="flex justify-between items-center text-sm">
             <span className="text-slate-400">{t.package}</span>
             <span className="font-mono text-[10px] text-emerald-400">com.nur.deenai</span>
+          </div>
+          <div className="flex justify-between items-center text-sm">
+            <span className="text-slate-400">{t.engine}</span>
+            <span className="font-mono text-[10px] text-emerald-400">Bubblewrap TWA</span>
           </div>
         </div>
       </section>

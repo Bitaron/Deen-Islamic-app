@@ -1,0 +1,26 @@
+
+{
+  "name": "Nur: Your Deen AI",
+  "short_name": "Nur",
+  "description": "Your Islamic AI companion for guidance, prayer times, and spiritual growth.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#1a1c12",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3133/3133604.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3133/3133604.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
