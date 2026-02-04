@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nur AI">
+    
+    <!-- SEO / Store Discovery -->
+    <meta name="description" content="Nur: Your Islamic AI companion for guidance, prayer times, and spiritual growth. Optimized for Ramadan 2026.">
+    <meta name="keywords" content="Islam, Quran, Prayer Times, Ramadan 2026, Islamic AI, Hadith, Zakat">
+    
+    <!-- Branding & PWA -->
+    <meta name="theme-color" content="#1a1c12">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3133/3133604.png">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3133/3133604.png">
+    
+    <title>Nur: Your Deen AI</title>
+    
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Dark Theme (Night) - Default */
+            --bg-main: #000000;
+            --bg-gradient: radial-gradient(circle at top right, #3d411b, #1a1c0d, #000000);
+            --bg-glass: rgba(15, 23, 10, 0.6);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border-color: rgba(255, 255, 255, 0.05);
+            --brand-olive: #a4b465;
+            --brand-olive-dark: #708238;
+            --card-bg: rgba(255, 255, 255, 0.03);
+        }
+
+        [data-theme="light"] {
+            /* Light Theme (Day) */
+            --bg-main: #fdfbf7;
+            --bg-gradient: radial-gradient(circle at top right, #f5f5dc, #fdfbf7, #fdfbf7);
+            --bg-glass: rgba(255, 255, 255, 0.8);
+            --text-primary: #1a1c0d;
+            --text-secondary: #64748b;
+            --border-color: rgba(0, 0, 0, 0.05);
+            --brand-olive: #708238;
+            --brand-olive-dark: #556b2f;
+            --card-bg: #ffffff;
+        }
+
+        body { 
+          font-family: 'Inter', sans-serif; 
+          background-color: var(--bg-main);
+          color: var(--text-primary);
+          transition: background-color 0.5s ease, color 0.5s ease;
+          -webkit-tap-highlight-color: transparent;
+        }
+        
+        .arabic { font-family: 'Amiri', serif; }
+        
+        .glass {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            transition: background 0.5s ease, border 0.5s ease;
+        }
+        
+        .gradient-bg {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            transition: background 0.8s ease;
+        }
+
+        ::-webkit-scrollbar {
+          width: 0px;
+          background: transparent;
+        }
+        
+        * {
+          user-select: none;
+          -webkit-user-select: none;
+          -webkit-overflow-scrolling: touch;
+        }
+        
+        input, .chat-text, .selectable {
+          user-select: text;
+          -webkit-user-select: text;
+        }
+        
+        /* Brand Colors Helpers */
+        .text-olive { color: var(--brand-olive); }
+        .bg-olive { background-color: var(--brand-olive-dark); }
+        .border-olive { border-color: var(--brand-olive); }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="gradient-bg min-h-screen overflow-x-hidden">
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(err => {
+            console.log('SW registration failed: ', err);
+          });
+        });
+      }
+    </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

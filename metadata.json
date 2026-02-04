@@ -1,0 +1,17 @@
+
+{
+  "name": "Nur: Your Deen AI",
+  "short_name": "Nur",
+  "description": "An all-in-one Islamic companion featuring an AI assistant for religious guidance, prayer times, Quran, daily spiritual tracking, and a comprehensive Hijri calendar. Optimized for Ramadan 2026 with an elegant organic aesthetic.",
+  "version": "1.0.6",
+  "categories": [
+    "lifestyle",
+    "productivity",
+    "education"
+  ],
+  "requestFramePermissions": [
+    "geolocation",
+    "camera",
+    "microphone"
+  ]
+}
