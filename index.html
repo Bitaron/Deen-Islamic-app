@@ -16,6 +16,7 @@
     <meta name="theme-color" content="#1a1c12">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3133/3133604.png">
+    <link rel="shortcut icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3133/3133604.png">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3133/3133604.png">
     
     <title>Nur: Your Deen AI</title>
@@ -31,7 +32,7 @@
             --bg-main: #000000;
             --bg-gradient: radial-gradient(circle at top right, #3d411b, #1a1c0d, #000000);
             --bg-glass: rgba(15, 23, 10, 0.6);
-            --text-primary: #f1f5f9;
+            --text-primary: #f1f5fSlate-50;
             --text-secondary: #94a3b8;
             --border-color: rgba(255, 255, 255, 0.05);
             --brand-olive: #a4b465;
@@ -99,11 +100,11 @@
 <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1",
     "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
     "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
-    "vite": "https://esm.sh/vite@^7.3.1"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
   }
 }
 </script>
@@ -111,6 +112,8 @@
 </head>
 <body class="gradient-bg min-h-screen overflow-x-hidden">
     <div id="root"></div>
+    <!-- Entry Point for Vite -->
+    <script type="module" src="/index.tsx"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -120,6 +123,5 @@
         });
       }
     </script>
-<script type="module" src="/index.tsx"></script>
 </body>
 </html>
