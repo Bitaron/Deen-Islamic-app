@@ -1,4 +1,3 @@
-
 # 🌿 Nur AI: Your Spiritual Deen Companion
 
 Nur AI is an elegant, privacy-focused Islamic companion application designed for Ramadan 2026.
@@ -13,25 +12,23 @@ Ensure you have Node.js installed, then run:
 npm install -g @bubblewrap/cli
 ```
 
-### 2. Initialize the Project
-Bubblewrap reads your live PWA manifest to generate the Android project.
+### 2. Configure the Build
+The `twa-manifest.json` is already included in this repository. If you are building for the first time on a new machine:
 ```bash
-bubblewrap init --manifest https://bitaron.github.io/Deen-Islamic-app/manifest.json
+bubblewrap update
 ```
-Follow the prompts. Use `com.nur.deenai` as the Package ID.
 
 ### 3. Build the APK/Bundle
 ```bash
 bubblewrap build
 ```
-This will generate an `.apk` and `.aab` file in your directory.
+This will generate an `.apk` and `.aab` file in your directory. You will need your `android.keystore` file present in the root directory to sign the build.
 
 ### 4. Setup Digital Asset Links
-Bubblewrap will generate a `assetlinks.json` file for you. 
 1. Copy the contents of the generated `assetlinks.json`.
 2. Update the file in this repository at `public/.well-known/assetlinks.json`.
 3. Push to GitHub.
-4. Once verified, the browser address bar will disappear in your Android app, giving it a 100% native look.
+4. Once verified, the browser address bar will disappear in your Android app.
 
 ## 🛠️ Local Development
 1. `npm install`

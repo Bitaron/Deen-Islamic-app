@@ -1,10 +1,9 @@
-
 {
   "name": "Nur: Your Deen AI",
   "short_name": "Nur",
   "description": "Your Islamic AI companion for guidance, prayer times, and spiritual growth.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": ".",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#000000",

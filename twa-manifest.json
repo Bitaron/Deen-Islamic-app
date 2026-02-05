@@ -1,0 +1,43 @@
+{
+  "packageId": "com.nur.deenai",
+  "host": "bitaron.github.io",
+  "name": "Nur: Your Deen AI",
+  "launcherName": "Nur",
+  "display": "standalone",
+  "themeColor": "#1A1C12",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#1A1C12",
+  "navigationDividerColorDark": "#1A1C12",
+  "backgroundColor": "#000000",
+  "enableNotifications": false,
+  "startUrl": "/Deen-Islamic-app/",
+  "iconUrl": "https://cdn-icons-png.flaticon.com/512/3133/3133604.png",
+  "maskableIconUrl": "https://cdn-icons-png.flaticon.com/512/3133/3133604.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 8,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://bitaron.github.io/Deen-Islamic-app/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "minSdkVersion": 21,
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "displayOverride": [],
+  "appVersion": "1"
+}
